@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.Stipend" table="stipend" schema="db_hr">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="basic">
+            <column name="basic" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="eat">
+            <column name="eat" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="house">
+            <column name="house" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="duty">
+            <column name="duty" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="scot">
+            <column name="scot" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="punishment">
+            <column name="punishment" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="other">
+            <column name="other" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="granttime">
+            <column name="granttime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="totalize">
+            <column name="totalize" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

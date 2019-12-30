@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.Educate" table="educate" schema="db_hr">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="purpose">
+            <column name="purpose" sql-type="varchar(500)" length="500"/>
+        </property>
+        <property name="begintime">
+            <column name="begintime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="endtime">
+            <column name="endtime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="datum">
+            <column name="datum" sql-type="text" not-null="true"/>
+        </property>
+        <property name="teacher">
+            <column name="teacher" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="student">
+            <column name="student" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="createtime">
+            <column name="createtime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="educate">
+            <column name="educate" sql-type="bit(1)"/>
+        </property>
+        <property name="effect">
+            <column name="effect" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="summarize">
+            <column name="summarize" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

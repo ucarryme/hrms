@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.Job" table="job" schema="db_hr">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="bit(1)" not-null="true"/>
+        </property>
+        <property name="age">
+            <column name="age" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="job">
+            <column name="job" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="specialty">
+            <column name="specialty" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="experience">
+            <column name="experience" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="studyeffort">
+            <column name="studyeffort" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="school">
+            <column name="school" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="tel">
+            <column name="tel" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="createtime">
+            <column name="createtime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="text" not-null="true"/>
+        </property>
+        <property name="isstock">
+            <column name="isstock" sql-type="bit(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
